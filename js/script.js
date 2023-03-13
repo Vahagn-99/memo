@@ -79,6 +79,8 @@ card.forEach(function (card) {
         card.classList.add('flip');
         // Ու ամեն 3վ հետո ելի փակում
         //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
+        // Ու ամեն 3վ հետո ելի փակում
+        //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
         // Ամեն 3վ հետո ելի փակում
         setTimeout(() => {
             card.classList.remove('flip');
@@ -108,16 +110,16 @@ const timerElement = document.getElementById('timer');
 let timeLeft = 30;
 
 function updateTimer() {
-    if (timeLeft > 0) {
-        timeLeft--;
-        timerElement.textContent = `${timeLeft}s`;
-        setTimeout(updateTimer, 1000);
-    } else {
-        alert('Time is up!');
-    }
+  if (timeLeft > 0) {
+    timeLeft--;
+    timerElement.textContent = `${timeLeft}s`;
+    setTimeout(updateTimer, 1000);
+  } else {
+    alert('Time is up!');
+  }
 }
 startButton.addEventListener('click', () => {
-    updateTimer();
+  updateTimer();
 });
 
 // Սղմելու վախտ բացվումա 
@@ -137,3 +139,4 @@ window.onclick = function (event) {
         }
     }
 }
+
