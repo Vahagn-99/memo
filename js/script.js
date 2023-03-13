@@ -67,9 +67,9 @@ levalBtnHigh.addEventListener('click', function () {
     cardMid.forEach(function (item) {
         item.classList.remove('card-mid')
     })
-    cardHigh.forEach(function(item){
+    cardHigh.forEach(function (item) {
         item.classList.remove('card-high')
-   })
+    })
 })
 
 
