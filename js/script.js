@@ -73,21 +73,16 @@ levalBtnHigh.addEventListener('click', function () {
 })
 
 
-
-
-
-
-
-
-
 // Ամեն անգամ click վախտ պտտում քարը
 card.forEach(function (card) {
     card.addEventListener('click', function () {
         card.classList.add('flip');
+        // Ու ամեն 3վ հետո ելի փակում
+        //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
         // Ամեն 3վ հետո ելի փակում
         setTimeout(() => {
             card.classList.remove('flip');
-        }, "3000");
+        }, "1500");
     });
 });
 
@@ -105,6 +100,25 @@ card.forEach(function (item) {
     });
 });
 
+//esel erb sexmum es strat jamanaky sksuma gnal erba havasarvuma 0-i bolor qartery pakvum en
+//bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
+const startButton = document.querySelector('.start-btn');
+const timerElement = document.getElementById('timer');
+
+let timeLeft = 30;
+
+function updateTimer() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        timerElement.textContent = `${timeLeft}s`;
+        setTimeout(updateTimer, 1000);
+    } else {
+        alert('Time is up!');
+    }
+}
+startButton.addEventListener('click', () => {
+    updateTimer();
+});
 
 // Սղմելու վախտ բացվումա 
 function myFunction() {
