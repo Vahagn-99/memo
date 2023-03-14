@@ -106,6 +106,7 @@ card.forEach(function (item) {
 
 //esel erb sexmum es strat jamanaky sksuma gnal erba havasarvuma 0-i bolor qartery pakvum en
 //bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
+// Ես էտ խնդիրը ուղղել եմ
 const startButton = document.querySelector('.start-btn');
 const timerElement = document.getElementById('timer');
 
@@ -117,7 +118,7 @@ function updateTimer() {
     timerElement.textContent = `0:${timeLeft}s`;
     setTimeout(updateTimer, 1000);
   } else {
-    alert('Time is up!');
+    document.getElementById("timer").innerHTML = "Time is up!";
   }
 }
 startButton.addEventListener('click', () => {
