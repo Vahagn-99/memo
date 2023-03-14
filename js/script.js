@@ -82,9 +82,15 @@ card.forEach(function (card) {
         // Ու ամեն 3վ հետո ելի փակում
         //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
         // Ամեն 3վ հետո ելի փակում
+        console.log("Value name", card.dataset.value,"Framework name", card.dataset.framework);
+        if(card.dataset.value === card.dataset.framework){
+            console.log("Havasra en");
+        }else{
+            console.log("havasra chen");
+        }
         setTimeout(() => {
             card.classList.remove('flip');
-        }, "1500");
+        }, 1500);
     });
 });
 
@@ -107,12 +113,12 @@ card.forEach(function (item) {
 const startButton = document.querySelector('.start-btn');
 const timerElement = document.getElementById('timer');
 
-let timeLeft = 30;
+let timeLeft =30;
 
 function updateTimer() {
   if (timeLeft > 0) {
     timeLeft--;
-    timerElement.textContent = `${timeLeft}s`;
+    timerElement.textContent = `0:${timeLeft}s`;
     setTimeout(updateTimer, 1000);
   } else {
     alert('Time is up!');

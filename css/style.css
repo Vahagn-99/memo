@@ -297,7 +297,7 @@ option:active {
     /* box-shadow: inset 0px -32px 44px -20px rgba(120, 115, 115, 0.34); */
 }
 
-.one-m {}
+/* .one-m {} */
 
 .e {
     color: red;
@@ -305,7 +305,7 @@ option:active {
     transform: rotate(15deg);
 }
 
-.m {}
+/* .m {} */
 
 .o {
     position: relative;
