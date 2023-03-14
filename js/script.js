@@ -118,7 +118,7 @@ function updateTimer() {
     timerElement.textContent = `0:${timeLeft}s`;
     setTimeout(updateTimer, 1000);
   } else {
-    document.getElementById("timer").innerHTML = "Time is up!";
+    timerElement.innerHTML = "Time is up!";
   }
 }
 startButton.addEventListener('click', () => {
