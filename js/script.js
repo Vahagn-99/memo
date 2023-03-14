@@ -82,12 +82,8 @@ card.forEach(function (card) {
         // Ու ամեն 3վ հետո ելի փակում
         //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
         // Ամեն 3վ հետո ելի փակում
-        console.log("Value name", card.dataset.value,"Framework name", card.dataset.framework);
-        if(card.dataset.value === card.dataset.framework){
-            console.log("Havasra en");
-        }else{
-            console.log("havasra chen");
-        }
+        console.log("Value name", card.dataset.value);
+
         setTimeout(() => {
             card.classList.remove('flip');
         }, 1500);
