@@ -73,22 +73,44 @@ levalBtnHigh.addEventListener('click', function () {
 })
 
 
-// Ամեն անգամ click վախտ պտտում քարը
-card.forEach(function (card) {
-    card.addEventListener('click', function () {
-        card.classList.add('flip');
-        // Ու ամեն 3վ հետո ելի փակում
-        //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
-        // Ու ամեն 3վ հետո ելի փակում
-        //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
-        // Ամեն 3վ հետո ելի փակում
-        console.log("Value name", card.dataset.value);
 
-        setTimeout(() => {
-            card.classList.remove('flip');
-        }, 1500);
-    });
+
+const openingcards = document.querySelectorAll('.card');
+
+let previousClick = null;
+
+openingcards.forEach(function (card) {
+  card.addEventListener('click', function () {
+    card.classList.add('flip');
+    // Ու ամեն 3վ հետո ելի փակում
+    //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
+    // Ու ամեն 3վ հետո ելի փակում
+    //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
+    // Ամեն 3վ հետո ելի փակում
+    console.log("Value name", card.dataset.value);
+
+    let currentClick = card.dataset.value;
+
+    // ստուգմ ենք տենանք քարտ կա բացված ու էտ ինչ քարտա
+    if (previousClick === null) {
+      previousClick = currentClick;
+    } else {
+      // Համեմատմ ենք բացված ու նախորդ քարի արժեքը
+      if (previousClick === currentClick) {
+        console.log("havasra en");
+      } else {
+        console.log("havasar chen");
+      }
+      // փոխմ ենք վերջին քարտի արժեքը 
+      previousClick = null;
+    }
+    setTimeout(() => {
+        card.classList.remove('flip');
+      }, 1500);
+  });
 });
+
+
 
 
 //Ես ել սխալի վախտ պետքա սենց shake անի ուղղկի mouseenter֊ով եմ արե ես պահին վոր տենանք վոնցա աշխատում
