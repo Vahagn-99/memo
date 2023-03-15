@@ -87,7 +87,7 @@ openingcards.forEach(function (card) {
     // Ու ամեն 3վ հետո ելի փակում
     //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
     // Ամեն 3վ հետո ելի փակում
-    console.log("Value name", card.dataset.value);
+    console.log("Data-Value name", card.dataset.value);
 
     let currentClick = card.dataset.value;
 
@@ -95,13 +95,13 @@ openingcards.forEach(function (card) {
     if (previousClick === null) {
       previousClick = currentClick;
     } else {
-      // Համեմատմ ենք բացված ու նախորդ քարի արժեքը
-      if (previousClick === currentClick) {
-        console.log("havasra en");
-      } else {
-        console.log("havasar chen");
-      }
-      // փոխմ ենք վերջին քարտի արժեքը 
+        // Համեմատմ ենք բացված ու նախորդ քարտի արժեքը
+        if (previousClick === currentClick) {
+            console.log("Have the same values");
+        } else {
+            console.log("Do not have the same values");
+        }
+        // փոխմ ենք վերջին քարտի արժեքը 
       previousClick = null;
     }
     setTimeout(() => {
