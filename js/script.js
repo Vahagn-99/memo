@@ -74,6 +74,8 @@ levalBtnHigh.addEventListener('click', function () {
 
 
 
+/* ստեղ խի եք թազա const հաըտարարե վիրևը արդեն կա  եսա՝*/
+// const card = document.querySelectorAll(".card");
 
 const openingcards = document.querySelectorAll('.card');
 
@@ -84,14 +86,12 @@ openingcards.forEach(function (card) {
     card.classList.add('flip');
     // Ու ամեն 3վ հետո ելի փակում
     //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
-    // Ու ամեն 3վ հետո ելի փակում
-    //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
-    // Ամեն 3վ հետո ելի փակում
     console.log("Data-Value name", card.dataset.value);
 
     let currentClick = card.dataset.value;
 
     // ստուգմ ենք տենանք քարտ կա բացված ու էտ ինչ քարտա
+    /* ինչ պետքա անի ես ֆունկցիան*/
     if (previousClick === null) {
       previousClick = currentClick;
     } else {
@@ -114,17 +114,18 @@ openingcards.forEach(function (card) {
 
 
 //Ես ել սխալի վախտ պետքա սենց shake անի ուղղկի mouseenter֊ով եմ արե ես պահին վոր տենանք վոնցա աշխատում
-card.forEach(function (item) {
-    item.addEventListener('mouseenter', function () {
-        item.classList.add('shake');
-    });
-});
+// հլը որ սա պետք չի
+// card.forEach(function (item) {
+//     item.addEventListener('mouseenter', function () {
+//         item.classList.add('shake');
+//     });
+// });
 
-card.forEach(function (item) {
-    item.addEventListener('mouseleave', function () {
-        item.classList.remove('shake');
-    });
-});
+// card.forEach(function (item) {
+//     item.addEventListener('mouseleave', function () {
+//         item.classList.remove('shake');
+//     });
+// });
 
 //esel erb sexmum es strat jamanaky sksuma gnal erba havasarvuma 0-i bolor qartery pakvum en
 //bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
