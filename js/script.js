@@ -95,7 +95,15 @@ card.forEach(function (card) {
       previousClick = currentClick;
     } else {
         // Համեմատմ ենք բացված ու նախորդ քարտի արժեքը
-        if (previousClick === currentClick) {
+        if (previousClick == currentClick) {
+
+
+
+            // card.classList.add('even')
+            // card.classList.add('anim')
+
+
+            
             console.log("Have the same values");
         } else {
             console.log("Do not have the same values");
