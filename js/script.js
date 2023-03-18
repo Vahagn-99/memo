@@ -1,3 +1,11 @@
+const startButton = document.querySelector('.start-btn');
+
+
+// Սա նրա համար եմ արել որ ստարտի ժամանաակ աշխատի ուղակի մի բան նիտոա քիմ ու ճիշտ չի աշխատմ եթե կարաք տեսեք ինչն ա խնդիրը ու ուղղեք
+// startButton.addEventListener('click', () => {
+// });
+
+
 // Ստանում ենք cards
 const card = document.querySelectorAll(".card");
 
@@ -77,59 +85,47 @@ levalBtnHigh.addEventListener('click', function () {
 /* ստեղ խի եք թազա const հաըտարարե վիրևը արդեն կա  եսա՝*/
 // const card = document.querySelectorAll(".card");
 
+// 
 
-let previousClick = null;
+// էս են նույն լոգիկանա ուղակի ուրիշ ձև
+function compareCards() {
+  const openCards = document.querySelectorAll('.flip:not(.matched)');
+  if (openCards.length === 2) {
+    if (openCards[0].dataset.value === openCards[1].dataset.value) {
+      console.log("Have the same values");
+      openCards.forEach(function(card){
+        card.classList.add('matched');
+      });
+    } else {
+      console.log("Do not have the same values");
+      openCards.forEach(function(card){
+        card.classList.add('shake');
+        setTimeout(() => {
+            card.classList.remove('flip', 'shake');
+          }, 1500);
+      });
+    }
+  }
+}
 
 card.forEach(function (card) {
   card.addEventListener('click', function () {
     card.classList.add('flip');
-    // Ու ամեն 3վ հետո ելի փակում
-    //es 3 varkyany sarqeci 1,5 varkyan vorovhetev 3 varkyan jamanakahatvacum karas 3 kam 4 qar bacel 
     console.log("Data-Value name", card.dataset.value);
-
-    let currentClick = card.dataset.value;
-
-    // ստուգմ ենք տենանք քարտ կա բացված ու էտ ինչ քարտա
-    /* ինչ պետքա անի ես ֆունկցիան*/
-    if (previousClick === null) {
-      previousClick = currentClick;
-    } else {
-        // Համեմատմ ենք բացված ու նախորդ քարտի արժեքը
-        if (previousClick == currentClick) {
-
-
-
-            // card.classList.add('even')
-            // card.classList.add('anim')
-
-
-            
-            console.log("Have the same values");
-        } else {
-            console.log("Do not have the same values");
-            // 
-            // item.classList.add('shake');
-            setTimeout(() => {
-                card.classList.remove('flip');
-              }, 1500);
-        }
-        // փոխմ ենք վերջին քարտի արժեքը 
-      previousClick = null;
-    }
-    
+    compareCards();
   });
 });
 
-
-
+// 
 
 //Ես ել սխալի վախտ պետքա սենց shake անի ուղղկի mouseenter֊ով եմ արե ես պահին վոր տենանք վոնցա աշխատում
 // հլը որ սա պետք չի
-card.forEach(function (item) {
-    item.addEventListener('mouseenter', function () {
-        item.classList.add('shake');
-    });
-});
+
+// card.forEach(function (item) {
+//     item.addEventListener('mouseenter', function () {
+//         item.classList.add('shake');
+//     });
+// });
 
 // card.forEach(function (item) {
 //     item.addEventListener('mouseleave', function () {
@@ -140,7 +136,7 @@ card.forEach(function (item) {
 //esel erb sexmum es strat jamanaky sksuma gnal erba havasarvuma 0-i bolor qartery pakvum en
 //bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
 // Ես էտ խնդիրը ուղղել եմ
-const startButton = document.querySelector('.start-btn');
+
 const timerElement = document.getElementById('timer');
 
 let timeLeft =30;
@@ -162,6 +158,7 @@ startButton.addEventListener('click', () => {
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
+myFunction()
 // Եթե ուրիշ տեղե ենք սղմում պակվումա (կամ ելի իրա վրա երկրորդ անգամ սղմելուց)
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
@@ -175,4 +172,3 @@ window.onclick = function (event) {
         }
     }
 }
-
