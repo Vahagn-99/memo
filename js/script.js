@@ -55,7 +55,7 @@ levalBtnMid.addEventListener('click', function () {
 })
 
 
-// Gigh
+// High
 levalBtnHigh.addEventListener('click', function () {
     cards.classList.add('cards-high');
     cards.style.width = '390px';
@@ -77,11 +77,10 @@ levalBtnHigh.addEventListener('click', function () {
 /* ստեղ խի եք թազա const հաըտարարե վիրևը արդեն կա  եսա՝*/
 // const card = document.querySelectorAll(".card");
 
-const openingcards = document.querySelectorAll('.card');
 
 let previousClick = null;
 
-openingcards.forEach(function (card) {
+card.forEach(function (card) {
   card.addEventListener('click', function () {
     card.classList.add('flip');
     // Ու ամեն 3վ հետո ելի փակում
@@ -100,13 +99,16 @@ openingcards.forEach(function (card) {
             console.log("Have the same values");
         } else {
             console.log("Do not have the same values");
+            // 
+            // item.classList.add('shake');
+            setTimeout(() => {
+                card.classList.remove('flip');
+              }, 1500);
         }
         // փոխմ ենք վերջին քարտի արժեքը 
       previousClick = null;
     }
-    setTimeout(() => {
-        card.classList.remove('flip');
-      }, 1500);
+    
   });
 });
 
@@ -115,11 +117,11 @@ openingcards.forEach(function (card) {
 
 //Ես ել սխալի վախտ պետքա սենց shake անի ուղղկի mouseenter֊ով եմ արե ես պահին վոր տենանք վոնցա աշխատում
 // հլը որ սա պետք չի
-// card.forEach(function (item) {
-//     item.addEventListener('mouseenter', function () {
-//         item.classList.add('shake');
-//     });
-// });
+card.forEach(function (item) {
+    item.addEventListener('mouseenter', function () {
+        item.classList.add('shake');
+    });
+});
 
 // card.forEach(function (item) {
 //     item.addEventListener('mouseleave', function () {
@@ -155,10 +157,10 @@ function myFunction() {
 // Եթե ուրիշ տեղե ենք սղմում պակվումա (կամ ելի իրա վրա երկրորդ անգամ սղմելուց)
 window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
         for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+            let openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
