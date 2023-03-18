@@ -1,4 +1,3 @@
-const startButton = document.querySelector('.start-btn');
 
 
 // Սա նրա համար եմ արել որ ստարտի ժամանաակ աշխատի ուղակի մի բան նիտոա քիմ ու ճիշտ չի աշխատմ եթե կարաք տեսեք ինչն ա խնդիրը ու ուղղեք
@@ -137,6 +136,7 @@ card.forEach(function (card) {
 //bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
 // Ես էտ խնդիրը ուղղել եմ
 
+const startButton = document.querySelector('.start-btn');
 const timerElement = document.getElementById('timer');
 
 let timeLeft =30;
@@ -172,3 +172,7 @@ window.onclick = function (event) {
         }
     }
 }
+
+
+
+// չգիտեմ տեսել եք թե չէ բայվ mid-մ ու high լեվելներմ վերջմ երկու ավել քարա մնմ վայթե մեկը կարմիրից մեկը կանաչից
