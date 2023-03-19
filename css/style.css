@@ -363,6 +363,23 @@ option:active {
     }
 }
 
+@keyframes even {
+
+    0% {
+            transform: scale(00001);
+    }
+
+    50% {
+        transform: scale(0.8);
+    }
+
+    100% {
+                    transform: scale(00001);
+    }
+}
+.card.even {
+    animation: even 0.35s ease-in-out;
+}
 
 
 

@@ -138,6 +138,9 @@ function compareCards() {
       console.log("Have the same values");
       openCards.forEach(function(card){
         card.classList.add('matched');
+          setTimeout(() => {
+              card.classList.add('even');
+          }, 500);
       });
     } else {
       console.log("Do not have the same values");
