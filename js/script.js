@@ -154,8 +154,14 @@ function compareCards() {
   }
 }
 
+let levelTypeLow = 8;
+let levelTypeMid = 24;
+let levelTypeHigh = 48;
 
 function win(){
-
+  let countCards = document.querySelector(".matched");
+  if(levelTypeLow == 8 && countCards === 4 ){
+    return true
+  }
 }
 
