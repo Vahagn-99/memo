@@ -131,7 +131,6 @@ function updateTimer() {
   }
 }
 updateTimer();
-// startButton.addEventListener('click', () => { });
 // Եթե ուրիշ տեղե ենք սղմում պակվումա (կամ ելի իրա վրա երկրորդ անգամ սղմելուց)
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
