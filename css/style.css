@@ -345,27 +345,6 @@ option:active {
 }
 
 @keyframes shak {
-    /* 
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    20% {
-        transform: rotate(-20deg);
-    }
-
-    40% {
-        transform: rotate(20deg)
-    }
-
-    60% {
-        transform: rotate(-10deg)
-    }
-
-    80% {
-        transform: rotate(10deg)
-    } */
 
     0% {
         transform: rotate(0deg);
@@ -455,4 +434,67 @@ option:active {
 
 .dropdown a:hover {
     background-color: #ddd;
+}
+
+
+/* Game ower */
+.game-ower-body{
+        top: 0;
+        min-height: 100vh;
+        width: 100%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+                .game-ower {
+                    overflow: hidden;
+                    font-size: 20px;
+                    /* position: absolute; */
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 30px;
+                    width: 700px;
+                     height: 330px;
+                    background: url(../images/game-ower-backgraund.jpg);
+                    backdrop-filter: blur(15px);
+                    border-top-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    background-position: center;
+                    background-size: cover;
+                        background-position-x: -6px;
+                }
+    
+        .game {
+            font-size: 65px;
+            letter-spacing:5px;
+            display: flex;
+        }
+    
+        .ower {
+            font-size: 65px;
+            letter-spacing: 5px;
+            display: flex;
+        }
+
+        .o-game::after{
+                    animation: puls 1s linear infinite;
+                    left: 22px;
+                        bottom: 36px;
+        }
+.e-game{
+        color: red;
+            font-weight: 200;
+            transform: rotate(15deg);
+}
+.e-game.shak {
+    animation: shak 1.5s linear infinite;
 }
