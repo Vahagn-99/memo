@@ -21,6 +21,7 @@ const levelBtnHigh = document.querySelector('.level-high');
 const cardWraper = document.querySelector('.cards');
 const cardMid = document.querySelectorAll('.card-mid');
 const cardHigh = document.querySelectorAll('.card-high');
+const gameOver = document.querySelector(".game-ower-body");
 
 dropDown.addEventListener('click',(e)=>{
   document.querySelector('#myDropdown').classList.toggle('show');
@@ -58,7 +59,6 @@ levelBtnMid.addEventListener('click', function () {
     })
 })
 
-
 // High
 levelBtnHigh.addEventListener('click', function () {
   cardWraper.classList.add('cards-high');
@@ -76,7 +76,6 @@ levelBtnHigh.addEventListener('click', function () {
   })
 })
 
-
 startButton.addEventListener('click', (e) => {
 //  levelBtn.forEach(function (level) {
 //     level.addEventListener('click', function () {
@@ -86,51 +85,36 @@ startButton.addEventListener('click', (e) => {
 // 
 
 // էս են նույն լոգիկանա ուղակի ուրիշ ձև
-compareCards();
-
-cards.forEach(function (card) {
+   compareCards();
+   updateTimer(30);
+  cards.forEach(function (card) {
   card.addEventListener('click', function () {
     card.classList.add('flip');
     console.log("Data-Value name", card.dataset.value);
     compareCards();
   });
+   });
 });
-
-// 
-
-//Ես ել սխալի վախտ պետքա սենց shake անի ուղղկի mouseenter֊ով եմ արե ես պահին վոր տենանք վոնցա աշխատում
-// հլը որ սա պետք չի
-
-// card.forEach(function (item) {
-//     item.addEventListener('mouseenter', function () {
-//         item.classList.add('shake');
-//     });
-// });
-
-// card.forEach(function (item) {
-//     item.addEventListener('mouseleave', function () {
-//         item.classList.remove('shake');
-//     });
-// });
-
-//esel erb sexmum es strat jamanaky sksuma gnal erba havasarvuma 0-i bolor qartery pakvum en
-//bayc ka mi xntir erb ajamanaky avartvumea uxaki alerta linum vor jamaky avartvel a
-// Ես էտ խնդիրը ուղղել եմ
-
 const timerElement = document.getElementById('timer');
 
-let timeLeft =30;
 
-function updateTimer() {
+function updateTimer(timeLeft) {
+  if(win()){
+    return timerElement.textContent = `win`
+  }
   if (timeLeft > 0) {
-    timeLeft--;
-    timerElement.textContent = `0:${timeLeft}s`;
-    setTimeout(updateTimer, 1000);
+    setTimeout(() => {
+      timeLeft--;
+      timerElement.textContent = `Time: 0:${timeLeft}s`;
+      updateTimer(timeLeft);
+    }, 1000);
   } else {
-    timerElement.innerHTML = document.querySelector(".game-ower-body");
+    gameOver.classList.remove('hide');
+    gameOver.classList.add('show-block');
   }
 }
-updateTimer();
+
+
 // Եթե ուրիշ տեղե ենք սղմում պակվումա (կամ ելի իրա վրա երկրորդ անգամ սղմելուց)
 window.onclick = function (event) {
   if (!event.target.matches('.dropbtn')) {
@@ -146,7 +130,6 @@ window.onclick = function (event) {
 }
 // չգիտեմ տեսել եք թե չէ բայվ mid-մ ու high լեվելներմ վերջմ երկու ավել քարա մնմ վայթե մեկը կարմիրից մեկը կանաչից
 
-});
 
 function compareCards() {
   const openCards = document.querySelectorAll('.flip:not(.matched)');
@@ -166,5 +149,10 @@ function compareCards() {
       });
     }
   }
+}
+
+function win(){
+
+  return false
 }
 

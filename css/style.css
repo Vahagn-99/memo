@@ -451,7 +451,8 @@ option:active {
         justify-content: center;
         backdrop-filter: blur(5px);
 }
-                .game-ower {
+                
+.game-ower {
                     overflow: hidden;
                     font-size: 20px;
                     /* position: absolute; */
@@ -498,4 +499,12 @@ option:active {
 }
 .e-game.shak {
     animation: shak 1.5s linear infinite;
+}
+
+.hide{
+display: none;
+}
+
+.show-block{
+    display: flex;
 }
