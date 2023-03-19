@@ -145,7 +145,9 @@ function compareCards() {
     } else {
       console.log("Do not have the same values");
       openCards.forEach(function(card){
-        card.classList.add('shake');
+        setTimeout(() => {
+          card.classList.add('shake');
+      }, 500);
         setTimeout(() => {
             card.classList.remove('flip', 'shake');
           }, 1500);
