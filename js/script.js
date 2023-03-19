@@ -151,8 +151,8 @@ function compareCards() {
   }
 }
 
+
 function win(){
 
-  return false
 }
 
