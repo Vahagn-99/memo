@@ -127,7 +127,7 @@ function updateTimer() {
     timerElement.textContent = `0:${timeLeft}s`;
     setTimeout(updateTimer, 1000);
   } else {
-    timerElement.innerHTML = "Time is up!";
+    timerElement.innerHTML = document.querySelector(".game-ower-body");
   }
 }
 updateTimer();
