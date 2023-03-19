@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MEMO</title>
+</head>
+
+<body>
+    <div class="wraper-body">
+        <div class="mmmm">
+            <span class="one-m">M</span>
+            <span class="e shak">E</span>
+            <span class="m">M</span>
+            <span class="o puls">O</span>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <div class="dropdown">
+                    <button class="dropbtn"> level</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="level-btn level-low" value="low" aria-checked="true" href="#">LOW</a>
+                        <a class="level-btn level-mid" href="#">MID</a>
+                        <a class="level-btn level-high" href="#">HIGH</a>
+                    </div>
+                </div>
+                <p class="title-time">Time:<span class="title-time-numbers" velue="30" id="timer">0:30s</span></p>
+
+                <!--  -->
+            </div>
+            <!-- cards -->
+            <ul class="cards ">
+
+                <!-- 1 -->
+                <li class="card" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card-img">
+                    </div>
+                </li>
+
+                <!-- mid -->
+                <li class="card card-mid " data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-mid" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-mid" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-mid" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-mid" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-mid" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-mid" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-mid" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-mid" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <li class="card card-mid" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-mid" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-mid" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-mid" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-mid" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-mid" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-mid" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-mid-img">
+                    </div>
+                </li>
+                <!-- mid-->
+                <!-- high -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-high" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-high" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-high" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-high" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 2 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 3 -->
+                <li class="card card-high" data-value="Hearts">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-1.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 4 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 5 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 6 -->
+                <li class="card card-high" data-value="Clubs">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-4.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 7 -->
+                <li class="card card-high" data-value="Diamonds">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-3.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 8 -->
+                <li class="card card-high" data-value="Present">
+                    <div class="view front-view">
+                        <img src="images/img-5.gif" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-5.png" alt="card card-high-img">
+                    </div>
+                </li>
+                <!-- 9 -->
+                <li class="card card-high" data-value="Spades">
+                    <div class="view front-view">
+                        <img src="images/harcakan.png" alt="icon">
+                    </div>
+                    <div class="view back-view">
+                        <img src="images/img-2.png" alt="card card-high-img">
+                    </div>
+                </li>
+
+            </ul>
+            <!-- BTN -->
+            <div class="buttom-body">
+                <button class="start-btn" type="submit">START</button>
+            </div>
+           
+        </div>
+    </div>
+    <!-- game ower -->
+    <div class="game-ower-body">
+        <div class="game-ower">
+            <div class="game">
+                <span class="g shak">G</span>
+                <span class="a shak">A</span>
+                <span class="m shak">M</span>
+                <span class="e shak">E</span>
+            </div>
+            <div class="ower">
+                <span class="o o-game shak">O</span>
+                <span class="v shak">V</span>
+                <span class="e shak">E</span>
+                <span class="r shak">R</span>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
