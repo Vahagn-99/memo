@@ -525,3 +525,57 @@ display: none;
 .show-block{
     display: flex;
 }
+
+
+
+/* you win */
+
+.you-win-body{
+    top: 0;
+    min-height: 100vh;
+    width: 100%;            
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);        
+}
+
+.you-win {
+    overflow: hidden;
+    font-size: 20px;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    width: 700px;
+    height: 330px;
+    background: url(/images/you_win.jpg);
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-position: center;
+    background-size: cover;
+    background-position-x: -6px;
+}
+
+
+ .you {
+     font-size: 80px;
+     letter-spacing: 5px;
+     display: flex;
+ }
+
+   .win {
+       font-size: 80px;
+       letter-spacing: 5px;
+       display: flex;
+   }
