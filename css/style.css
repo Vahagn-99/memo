@@ -519,7 +519,7 @@ option:active {
 }
 
 .hide{
-display: none;
+display: none !important;
 }
 
 .show-block{
@@ -537,11 +537,11 @@ display: none;
     left: 0;
     right: 0;
     position: absolute;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(5px);        
+    backdrop-filter: blur(5px);  
+    display: flex;      
 }
 
 .you-win {
@@ -559,7 +559,7 @@ display: none;
     width: 700px;
     height: 330px;
     background: url(/images/you_win.jpg);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
     background-position: center;

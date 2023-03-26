@@ -5,6 +5,7 @@ const startButton = document.querySelector('.start-btn');
 
 // Ստանում ենք cards
 const cards = document.querySelectorAll(".card");
+let currrentLevel = 0;
 
 const cardsImgFront = document.querySelectorAll(".front-view");
 const cardsImgBack = document.querySelectorAll(".back-view");
@@ -15,6 +16,7 @@ const levelBtn = document.querySelectorAll('.level-btn');
 const levelBtnLow = document.querySelector('.level-low');
 const levelBtnMid = document.querySelector('.level-mid');
 const levelBtnHigh = document.querySelector('.level-high');
+const winner = document.querySelector('.you-win-body')  
 
 
 // Ստանում ենք card ֊ի mid֊ը
@@ -29,6 +31,7 @@ dropDown.addEventListener('click',(e)=>{
 
 // Low
 levelBtnLow.addEventListener('click', function () {
+  currrentLevel = 8;
   cardWraper.classList.remove('cards-mid');
   cardWraper.classList.remove('cards-high');
   cardWraper.style.width = '350px';
@@ -45,6 +48,7 @@ levelBtnLow.addEventListener('click', function () {
 
 // Mid
 levelBtnMid.addEventListener('click', function () {
+  currrentLevel = 24;
     cardWraper.classList.add('cards-mid')
     cardWraper.classList.remove('cards-high');
     // 
@@ -61,6 +65,7 @@ levelBtnMid.addEventListener('click', function () {
 
 // High
 levelBtnHigh.addEventListener('click', function () {
+  currrentLevel = 48;
   cardWraper.classList.add('cards-high');
   cardWraper.style.width = '390px';
   cardWraper.style.height = '490px';
@@ -100,6 +105,7 @@ const timerElement = document.getElementById('timer');
 
 function updateTimer(timeLeft) {
   if(win()){
+    winner.classList.remove('hide');
     return timerElement.textContent = `win`
   }
   if (timeLeft > 0) {
@@ -155,15 +161,9 @@ function compareCards() {
     }
   }
 }
-
-let levelTypeLow = 8;
-let levelTypeMid = 24;
-let levelTypeHigh = 48;
-
 function win(){
-  let countCards = document.querySelector(".matched");
-  if(levelTypeLow == 8 && countCards === 4 ){
-    return true
-  }
-}
+  let countCards = document.querySelectorAll(".matched").length;
+  
+  return countCards ===  currrentLevel;
+} 
 
